@@ -50,7 +50,7 @@ export default function Index() {
 
       // Navigate after fade out
       setTimeout(() => {
-        router.replace('/auth/sign-in');
+        router.replace('/welcome/slider');
       }, 500);
     }, 3500);
 
