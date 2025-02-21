@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: 's1',
-    text: 'Learn African Native Languages',
-    title: 'Speak African',
+    text: 'Reclaim African Heritage one word at a time',
+    title: 'Afro Native',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
