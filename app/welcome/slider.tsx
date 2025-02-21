@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: 's1',
-    text: 'Best Recharge offers',
-    title: 'Mobile Recharge',
+    text: 'Reclaim African Heritage one word at a time',
+    title: 'Afro Native',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
@@ -141,8 +141,8 @@ const slides = [
   },
   {
     key: 's2',
-    title: 'Flight Booking',
-    text: 'Upto 25% off on Domestic Flights',
+    title: 'Select Regions',
+    text: 'All regions & What we Speak',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_flight_ticket_booking.png',
@@ -151,8 +151,8 @@ const slides = [
   },
   {
     key: 's3',
-    title: 'Great Offers',
-    text: 'Enjoy Great offers on our all services',
+    title: 'Discounted Lessons',
+    text: 'Enjoy Great Lessons at discounted rates',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_discount.png',
@@ -161,8 +161,8 @@ const slides = [
   },
   {
     key: 's4',
-    title: 'Best Deals',
-    text: ' Best Deals on all our services',
+    title: 'Best Teachers',
+    text: ' Best Linguist on all Languages',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_best_deals.png',
@@ -171,8 +171,8 @@ const slides = [
   },
   {
     key: 's5',
-    title: 'Bus Booking',
-    text: 'Enjoy Travelling on Bus with flat 100% off',
+    title: 'Paced Learning',
+    text: 'Enjoy Learning at your pace no pressure 100%',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_bus_ticket_booking.png',
@@ -181,8 +181,8 @@ const slides = [
   },
   {
     key: 's6',
-    title: 'Train Booking',
-    text: ' 10% off on first Train booking',
+    title: 'Trial Classes',
+    text: ' Try out the classes firstbefore enrolment',
     image: {
       uri:
         'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_train_ticket_booking.png',
