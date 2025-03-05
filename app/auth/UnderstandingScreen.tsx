@@ -19,7 +19,7 @@ const UnderstandingScreen = () => {
         <View style={styles.progress} />
         <View style={styles.progressInactive} />
       </View>
-      <Image source={require("./assets/language.png")} style={styles.image} />
+      <Image source={require("../../assets/images/lady.png")} style={styles.image} />
       <View style={styles.pickerContainer}>
         <Picker
           selectedValue={selectedLevel}
