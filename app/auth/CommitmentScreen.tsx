@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, FlatList } from "react-native";
 import { CheckBox } from "react-native-elements";
@@ -12,7 +13,7 @@ const options = [
 ];
 
 const CommitmentScreen = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   return (
     <View style={styles.container}>
@@ -26,7 +27,7 @@ const CommitmentScreen = () => {
         <View style={styles.progressInactive} />
         <View style={styles.progressInactive} />
       </View>
-      <Image source={require("./assets/hourglass.png")} style={styles.image} />
+      <Image source={require("../../assets/images/hourglass.png")} style={styles.image} />
       <FlatList
         data={options}
         keyExtractor={(item) => item}
@@ -39,9 +40,11 @@ const CommitmentScreen = () => {
           />
         )}
       />
-      <TouchableOpacity style={styles.nextButton}>
-        <Text style={styles.nextText}>Next</Text>
-      </TouchableOpacity>
+      <TouchableOpacity style={styles.nextButton}
+            onPress={() => router.push('/auth/UnderstandingScreen')}>
+      
+              <Text style={styles.nextText}>Next</Text>
+        </TouchableOpacity>
     </View>
   );
 };

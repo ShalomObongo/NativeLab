@@ -22,10 +22,26 @@ export default function SignIn() {
       useNativeDriver: true,
     }).start();
   }, []);
-
+  //Previous Code
+  //const handleSignIn = async () => {
+  //  await signIn(credentials);
+  //};
+  //Returns void which cannot be tested for truthiness
+  //const handleSignIn = async () => {
+    //const success = await signIn(credentials);
+    //if (success) {
+      //router.push('/welcome');
+    //}
+  //};
   const handleSignIn = async () => {
-    await signIn(credentials);
+    try {
+      await signIn(credentials);
+      router.push('/auth/WelcomeScreen'); // Redirect on successful sign-in
+    } catch (error) {
+      console.error('Sign-in failed:', error);
+    }
   };
+  
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -127,7 +143,10 @@ export default function SignIn() {
     </SafeAreaView>
   );
 }
-
+//Adding a "Forgot Password" option
+//Improving accessibility (e.g., screen reader support)
+//Enhancing error handling and feedback
+//Adding biometric authentication
 const styles = StyleSheet.create({
   safe: {
     flex: 1,

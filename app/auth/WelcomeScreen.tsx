@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import { StackScreenProps } from "@react-navigation/stack";
+import { router } from "expo-router";
 
-const WelcomeScreen = ({ navigation }) => {
-  const [selectedCountry, setSelectedCountry] = useState("Select");
+// Define the navigation stack types
+type RootStackParamList = {
+  WelcomeScreen: undefined;
+  CountrySelector: undefined;
+};
+
+type WelcomeScreenProps = StackScreenProps<RootStackParamList, "WelcomeScreen">;
+
+const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   return (
     <View style={styles.container}>
       <Image source={require("../../assets/images/welcome.png")} style={styles.image} />
       <Text style={styles.title}>WELCOME</Text>
       <Text style={styles.subtitle}>What Country are you from?</Text>
+      
       <View style={styles.pickerContainer}>
         <Picker
           selectedValue={selectedCountry}
@@ -23,7 +34,12 @@ const WelcomeScreen = ({ navigation }) => {
           <Picker.Item label="South Africa" value="SA" />
         </Picker>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("NextScreen") }>
+
+      <TouchableOpacity 
+        style={styles.button} 
+        onPress={() => router.push('/auth/CountrySelector')}
+        disabled={!selectedCountry} // Prevent navigation if no country is selected
+      >
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </View>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import { router } from "expo-router";
 
 const UnderstandingScreen = () => {
   const [selectedLevel, setSelectedLevel] = useState("LEVELS");
@@ -32,7 +33,8 @@ const UnderstandingScreen = () => {
           <Picker.Item label="Advanced" value="Advanced" />
         </Picker>
       </View>
-      <TouchableOpacity style={styles.finishButton}>
+      <TouchableOpacity style={styles.finishButton}
+      onPress={() => router.push('../../home/index')}>
         <Text style={styles.finishText}>Finish</Text>
       </TouchableOpacity>
     </View>
